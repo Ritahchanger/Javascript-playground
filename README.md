@@ -38,3 +38,44 @@ Here’s an overview of the main files and directories in this repo:
 ├── Todo2                    # Todo app using localStorage
 ├── todoApp                  # A basic todo application with vanilla JS, HTML, and CSS
 └── js1 / j1.js              # Additional scripts or LeetCode practice files
+
+
+## 🚀 Features
+- **LeetCode Challenges**: Solutions to common coding problems found on platforms like LeetCode, including algorithms for searching, sorting, dynamic programming, and more.
+- **JavaScript Projects**: Small-scale projects built with vanilla JavaScript, HTML, and CSS. Examples include to-do list apps, debouncing examples, and more.
+- **Problem-Solving**: Classic algorithm and data structure problems, including factorials, palindrome checkers, array manipulations, etc.
+- **Framework Integration**: Occasional use of JavaScript frameworks to test out various tools and enhance skills with different libraries and frameworks.
+
+---
+
+
+
+
+## `📝 Projects and Highlights`
+
+1. **To-Do List App**
+   - This project showcases the basics of task management using vanilla JavaScript.
+   - Two versions exist: one that stores tasks in memory (`todoApp`), and another using `localStorage` to persist tasks (`Todo2`).
+
+2. **Debouncing Example**
+   - Demonstrates how to debounce events like `scroll` or `input` to improve performance by limiting function calls.
+
+3. **LeetCode Challenges**
+   - Examples include algorithms for searching arrays, finding unique elements, majority elements, and working with strings (palindromes, anagrams, etc.).
+
+
+## 🧑‍💻 How to Use
+
+1. **Clone the Repo:**
+
+   ```bash
+   git clone https://github.com/Ritahchanger/Javascript-playground.git
+   cd Javascript-playground
+
+
+2. **Running Code:**
+
+Each file contains standalone code snippets, which can be run directly using Node.js. For example:
+
+```bash
+node AnagramChecker.js
