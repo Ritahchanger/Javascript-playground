@@ -1,4 +1,4 @@
-## `JavaScript Playground` ##
+# JavaScript Playground
 
 Welcome to the **JavaScript Playground**! This repository is a collection of various JavaScript code snippets, algorithms, small projects, and practice problems. The goal is to improve JavaScript skills through hands-on coding, including concepts from vanilla JS, frameworks, LeetCode challenges, and personal projects.
 
@@ -21,7 +21,7 @@ Here’s an overview of the main files and directories in this repo:
 ├── index.html               # Basic HTML for small projects
 ├── index.js                 # Entry point script for demo projects
 ├── index.css                # Stylesheet for demo projects
-├── MajorityElement.js        # Find the majority element in an array
+├── MajorityElement.js       # Find the majority element in an array
 ├── MaxInArray.js            # Script to find the max element in an array
 ├── median.js                # Calculate the median of numbers
 ├── NonRepeating.js          # Find the first non-repeating character in a string
@@ -40,18 +40,7 @@ Here’s an overview of the main files and directories in this repo:
 └── js1 / j1.js              # Additional scripts or LeetCode practice files
 
 
-## 🚀 Features
-- **LeetCode Challenges**: Solutions to common coding problems found on platforms like LeetCode, including algorithms for searching, sorting, dynamic programming, and more.
-- **JavaScript Projects**: Small-scale projects built with vanilla JavaScript, HTML, and CSS. Examples include to-do list apps, debouncing examples, and more.
-- **Problem-Solving**: Classic algorithm and data structure problems, including factorials, palindrome checkers, array manipulations, etc.
-- **Framework Integration**: Occasional use of JavaScript frameworks to test out various tools and enhance skills with different libraries and frameworks.
-
----
-
-
-
-
-## `📝 Projects and Highlights`
+## Projects and Highlights
 
 1. **To-Do List App**
    - This project showcases the basics of task management using vanilla JavaScript.
@@ -63,6 +52,16 @@ Here’s an overview of the main files and directories in this repo:
 3. **LeetCode Challenges**
    - Examples include algorithms for searching arrays, finding unique elements, majority elements, and working with strings (palindromes, anagrams, etc.).
 
+---
+
+## 🚀 Features
+
+- **LeetCode Challenges**: Solutions to common coding problems found on platforms like LeetCode, including algorithms for searching, sorting, dynamic programming, and more.
+- **JavaScript Projects**: Small-scale projects built with vanilla JavaScript, HTML, and CSS. Examples include to-do list apps, debouncing examples, and more.
+- **Problem-Solving**: Classic algorithm and data structure problems, including factorials, palindrome checkers, array manipulations, etc.
+- **Framework Integration**: Occasional use of JavaScript frameworks to test out various tools and enhance skills with different libraries and frameworks.
+
+---
 
 ## 🧑‍💻 How to Use
 
@@ -71,11 +70,3 @@ Here’s an overview of the main files and directories in this repo:
    ```bash
    git clone https://github.com/Ritahchanger/Javascript-playground.git
    cd Javascript-playground
-
-
-2. **Running Code:**
-
-Each file contains standalone code snippets, which can be run directly using Node.js. For example:
-
-```bash
-node AnagramChecker.js
