@@ -40,7 +40,7 @@ Here’s an overview of the main files and directories in this repo:
 └── js1 / j1.js              # Additional scripts or LeetCode practice files
 
 
-## Projects and Highlights
+
 
 1. **To-Do List App**
    - This project showcases the basics of task management using vanilla JavaScript.
