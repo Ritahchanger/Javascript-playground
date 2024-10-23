@@ -54,7 +54,8 @@ Here’s an overview of the main files and directories in this repo:
 
 ---
 
-## 🚀 Features
+## 🚀 Features 
+
 
 - **LeetCode Challenges**: Solutions to common coding problems found on platforms like LeetCode, including algorithms for searching, sorting, dynamic programming, and more.
 - **JavaScript Projects**: Small-scale projects built with vanilla JavaScript, HTML, and CSS. Examples include to-do list apps, debouncing examples, and more.
