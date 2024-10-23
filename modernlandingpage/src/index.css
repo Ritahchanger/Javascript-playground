@@ -5,6 +5,17 @@
 @tailwind utilities;
 
 
+:root{
+
+
+  font-family:'Outfit',sans-serif;
+
+  color-scheme:dark;
+
+  
+}
+
+
 * {
   margin: 0;
   padding: 0;
