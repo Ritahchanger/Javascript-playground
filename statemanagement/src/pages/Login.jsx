@@ -1,6 +1,48 @@
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 
+import Swal from "sweetalert2";
+
 const Login = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) =>{
+
+    e.preventDefault();
+
+    if(formData.email==="" || formData.password===""){
+
+        Swal.fire({
+
+
+            icon:"error",
+            title:"Oops...",
+
+            text:"Please fill in both email and password!",
+
+            confirmButtonColor:"#f97316",
+
+        })
+
+    }
+
+  }
+
+
   return (
     <div>
       <Navbar />
@@ -9,7 +51,7 @@ const Login = () => {
           <p className="text-3xl text-center font-bold text-orange-500 mb-8">
             LOGIN
           </p>
-          <form action="#" className="space-y-6">
+          <form action="#" className="space-y-6" onSubmit={handleSubmit}>
             <div className="input-group">
               <label
                 htmlFor="email"
@@ -22,6 +64,7 @@ const Login = () => {
                 name="email"
                 id="email"
                 placeholder="Enter your email..."
+                onChange={handleChange}
                 className="w-full h-12 border border-gray-300 rounded-lg mt-1 px-4 focus:outline-none focus:border-red-500 transition-colors"
               />
             </div>
@@ -36,6 +79,7 @@ const Login = () => {
                 type="password"
                 name="password"
                 id="password"
+                onChange={handleChange}
                 placeholder="Enter your password..."
                 className="w-full h-12 border border-gray-300 rounded-lg mt-1 px-4 focus:outline-none focus:border-red-500 transition-colors"
               />
