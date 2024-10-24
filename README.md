@@ -60,6 +60,7 @@ Here’s an overview of the main files and directories in this repo:
 - **LeetCode Challenges**: Solutions to common coding problems found on platforms like LeetCode, including algorithms for searching, sorting, dynamic programming, and more.
 - **JavaScript Projects**: Small-scale projects built with vanilla JavaScript, HTML, and CSS. Examples include to-do list apps, debouncing examples, and more.
 - **Problem-Solving**: Classic algorithm and data structure problems, including factorials, palindrome checkers, array manipulations, etc.
+- **Statemanagemet**: Redux toolkit & UseContext
 - **Framework Integration**: Occasional use of JavaScript frameworks to test out various tools and enhance skills with different libraries and frameworks.
 
 ---
