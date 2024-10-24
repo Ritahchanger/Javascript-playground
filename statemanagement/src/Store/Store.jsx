@@ -19,7 +19,6 @@ const Store = configureStore({
         auth:authSlice.reducer,
 
 
-
         cart:cartSlice.reducer,
 
 
