@@ -1,6 +1,3 @@
-##  `MODERN LANDING PAGE WITH REACT AND TAILWIND`  ##
-
-
 # Modern VR Landing Page
 
 ## Overview
