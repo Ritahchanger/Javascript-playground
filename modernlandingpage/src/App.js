@@ -8,6 +8,7 @@ import WorkFlow from "./components/WorkFlow";
 import Price from "./components/Price";
 
 import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <WorkFlow/>
         <Price/>
         <Testimonials/>
+        <Footer/>
       </div>
     </>
   );
