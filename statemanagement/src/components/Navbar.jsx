@@ -1,27 +1,30 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="h-[50px] border-b border-neutral-200 w-full flex items-center justify-between px-5">
       <div>
-        <a href="#" className="font-semibold text-orange-500 tracking-wide">
+        <Link to="#" className="font-semibold text-orange-500 tracking-wide">
           StateMG
-        </a>
+        </Link>
       </div>
 
       <div>
         <ul className="flex space-x-2">
           <li>
-            <a href="">Cart</a>
+            <Link to="#">Cart</Link>
           </li>
           <li>
-            <a href="">Products</a>
+            <Link to="#">Products</Link>
           </li>
           <li>
-            <a href="">Users</a>
+            <Link to="#">Users</Link>
           </li>
           <li>
-            <a href="">Signup</a>
+            <Link to="/signup">Signup</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
       </div>
