@@ -20,4 +20,9 @@ Make sure you have the following installed:
 **Clone the repository:**
    ```bash
    git clone https://github.com/Ritahchanger/Javascript-playground.git
-   cd Javascript-playground/modernlandingpage
+```
+**Running the application:**
+```bash
+cd modernlandingpage
+npm install
+npm run start
