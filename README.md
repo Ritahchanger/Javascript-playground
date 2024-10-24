@@ -8,7 +8,7 @@ Welcome to the **JavaScript Playground**! This repository is a collection of var
 
 Here’s an overview of the main files and directories in this repo:
 
-```bash
+```
 .
 ├── AnagramChecker.js        # Script to check if two strings are anagrams
 ├── ArrayChunking.js         # Script to divide an array into chunks
@@ -39,7 +39,7 @@ Here’s an overview of the main files and directories in this repo:
 ├── todoApp                  # A basic todo application with vanilla JS, HTML, and CSS
 └── js1 / j1.js              # Additional scripts or LeetCode practice files
 
-
+```
 
 
 1. **To-Do List App**
