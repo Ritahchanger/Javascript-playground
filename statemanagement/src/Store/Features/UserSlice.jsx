@@ -37,8 +37,6 @@ const usersSlice = createSlice({
   },
 });
 
-export const selectedUsers = (state) => state.users.users;
-export const selectLoading = (state) => state.users.loading;
-export const selectError = (state) => state.users.error;
+
 
 export default usersSlice;

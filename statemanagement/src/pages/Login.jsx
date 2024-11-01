@@ -3,7 +3,17 @@ import Navbar from "../components/Navbar";
 
 import Swal from "sweetalert2";
 
+import { Link } from "react-router-dom";
+
+
+import  { useNavigate } from "react-router-dom"
+
 const Login = () => {
+
+  const navigate = useNavigate()
+
+  const [ loading,setLoading ] = useState(false)
+
   const [formData, setFormData] = useState({
     email: "",
 
@@ -20,28 +30,50 @@ const Login = () => {
     }));
   };
 
-  const handleSubmit = (e) =>{
-
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(formData.email==="" || formData.password===""){
+    if (formData.email === "" || formData.password === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+
+        text: "Please fill in both email and password!",
+
+        confirmButtonColor: "#f97316",
+      });
+    } else {
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+
+      const user = users.find(
+        (user) =>
+          user.email === formData.email && user.password === formData.password
+      );
+
+      if (user) {
 
         Swal.fire({
+          title: "LOGIN SUCCESSFUL",
+          icon: "success",
+          confirmButtonText: "OK",
+        }).then(
+          ()=>{
+            navigate('/')
+          }
+        );
 
+      }else{
 
-            icon:"error",
-            title:"Oops...",
+        Swal.fire({
+          icon: "error",
+          title: "Invalid credentials",
+          text: "Please check your email and password.",
+          confirmButtonColor: "#f97316",
+        });
 
-            text:"Please fill in both email and password!",
-
-            confirmButtonColor:"#f97316",
-
-        })
-
+      }
     }
-
-  }
-
+  };
 
   return (
     <div>
@@ -95,9 +127,9 @@ const Login = () => {
           </form>
           <p className="text-sm text-center text-gray-500 mt-6">
             Don't have an account?{" "}
-            <a href="/register" className="text-orange-500 hover:underline">
+            <Link to="/signup" className="text-orange-500 hover:underline">
               Sign up here
-            </a>
+            </Link>
           </p>
         </div>
       </div>

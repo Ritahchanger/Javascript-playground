@@ -1,0 +1,59 @@
+.preloader{
+
+    display:flex;
+
+    flex-direction: column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:100vh;
+
+    background-color:rgba(255,255,255,0.9);
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+}
+
+.loader{
+
+    border:8px solid #44004f;
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin-bottom:10px;
+
+    border-left:none;
+
+    border-right:none;
+
+}
+
+@keyframes spin {
+    
+    0%{
+
+        transform:rotate(0deg);
+    }
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
