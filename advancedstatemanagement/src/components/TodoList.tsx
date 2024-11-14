@@ -34,7 +34,7 @@ const TodoList = () => {
               onClick={() => dispatch(toggleTodo(todo.id))}
               className="text-sm text-blue-500 hover:text-blue-700"
             >
-              Toggle
+              {todo.completed ? "UNDO" : "COMPLETE"}
             </button>
           </li>
         ))}
