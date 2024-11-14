@@ -30,7 +30,7 @@ const todoSlice = createSlice({
 
             const newTodo:Todo = {
 
-                id:Date.now(),
+                id:state.entities.length ? Math.max(...state.entities.map(entity=>entity.id)) + 1 : 1,
 
                 text:action.payload,
 
@@ -56,4 +56,4 @@ const todoSlice = createSlice({
 
 export const { addTodo,toggleTodo } = todoSlice.actions
 
-export default todoSlice.reducer
+export default todoSlice;
