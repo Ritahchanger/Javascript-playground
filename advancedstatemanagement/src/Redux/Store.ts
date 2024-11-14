@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit"
 
 
 import todoSlice from "./Features/TodoSlice";
+import userSlice from "./Features/UserSlice";
 
 
 const store = configureStore({
@@ -10,6 +11,8 @@ const store = configureStore({
     reducer:{
 
         todos:todoSlice.reducer,
+
+        users:userSlice.reducer
 
     },
 
