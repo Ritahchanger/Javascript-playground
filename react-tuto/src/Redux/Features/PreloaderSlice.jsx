@@ -3,7 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const PreloaderSlice = createSlice({
   name: "preloader",
   initialState: {
+
     loading: false,
+    
   },
   reducers: {
     openPreloader: (state) => {

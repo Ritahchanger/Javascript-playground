@@ -1,6 +1,14 @@
-import React from "react";
+import { addToCart } from "../../Redux/Features/CartSlice";
 
-const SingleBook = ({ book, index, addToCart }) => {
+import { useDispatch } from "react-redux";
+
+const SingleBook = ({ book, index }) => {
+  const dispatch = useDispatch();
+
+  const handleCart = (bookItem) => {
+    dispatch(addToCart(bookItem));
+  };
+
   return (
     <div
       key={index}
@@ -15,7 +23,7 @@ const SingleBook = ({ book, index, addToCart }) => {
       <button
         className="px-[2.5rem] py-[0.3rem] bg-green-500 text-white border-2 border-green-500 hover:bg-transparent hover:text-green-500 text-sm"
         onClick={() => {
-          addToCart(book);
+          handleCart(book);
         }}
       >
         ADD TO CART
