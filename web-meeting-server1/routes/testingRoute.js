@@ -65,7 +65,13 @@ Router.delete("/students/delete/:id",(req,res)=>{
 
     }
 
-    const findIndex = students.findIndex((student)=>student.id === id);
+    const findIndex = students.findIndex((student)=>student.id === parseInt(id));
+
+    if(findIndex === -1){
+
+        return res.status(404).json({message:'User not found',success:false});
+
+    }
 
     const [ deletedUser ] = students.splice(findIndex,1);
 
