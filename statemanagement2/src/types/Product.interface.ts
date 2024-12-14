@@ -1,6 +1,6 @@
 export interface Product{
 
-    id:string;
+    id:string | any;
 
     name:string;
 
@@ -8,7 +8,7 @@ export interface Product{
 
     description:string;
 
-    imageUrl:string;
+    imageUrl:string | any;
 
     stock:number;
 

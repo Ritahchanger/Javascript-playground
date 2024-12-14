@@ -8,11 +8,13 @@ interface CartState{
 
     items:CartItem[];
 
+ 
 }
 
 const initialState:CartState={
 
-    items:[]
+    items:[],
+
 
 }
 
