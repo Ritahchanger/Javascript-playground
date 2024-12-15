@@ -7,14 +7,12 @@ import { CartItem } from "../../types/Cart.interface";
 interface CartState{
 
     items:CartItem[];
-
  
 }
 
 const initialState:CartState={
 
     items:[],
-
 
 }
 
@@ -36,6 +34,8 @@ const cartSlice = createSlice({
             })
 
             if(existingItem){
+
+                alert('This item is already in the cart, quantity incremented')
 
                 existingItem.quantity += action.payload.quantity;
 

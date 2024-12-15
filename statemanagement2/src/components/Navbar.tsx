@@ -15,7 +15,17 @@ const Navbar = () => {
   return (
     <div className="nav h-[50px] w-full px-[3%] border-b border-neutral-300 flex justify-between items-center">
       <div>
-        <Link to="/home">LOGIN</Link>
+        <Link to="/home" className="flex items-center justify-between">
+          HOME
+          <span
+            className="h-[30px] w-[30px]
+        
+        flex items-center justify-center border-2 border-orange-500 rounded-full
+        "
+          >
+            O
+          </span>
+        </Link>
       </div>
       <div>
         <ul className="flex items-center gap-[10px]">
@@ -46,12 +56,14 @@ const Navbar = () => {
         </ul>
       </div>
       <div>
-        <p>
-          Cart Items:{" "}
-          <span className="font-semibold text-blue-500">
-            {numberOfCartItems}
-          </span>
-        </p>
+        <Link to="/carts-items">
+          <p>
+            Cart Items:{" "}
+            <span className="font-semibold text-blue-500">
+              {numberOfCartItems}
+            </span>
+          </p>
+        </Link>
       </div>
       <div>
         <div className="flex items-center justify-between">
