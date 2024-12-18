@@ -6,9 +6,7 @@ var singleElement = (nums) =>{
 
         if(!hash[num]){
 
-
             hash[num] = 1
-
 
         }else{
 
@@ -20,12 +18,9 @@ var singleElement = (nums) =>{
 
     for(let key in hash){
 
-
         if(hash[key] === 1){
 
-
             console.log(`The single element is ${key}`)
-
 
         }
 

@@ -1,31 +1,51 @@
-function reverseString(str){
+// function reverseString(str){
 
-    let reversed = "";
+//     let reversed = "";
 
-    for(let i = str.length - 1; i>=0; i--){
+//     for(let i = str.length - 1; i>=0; i--){
 
-        reversed +=str[i];
+//         reversed +=str[i];
 
-    }
-    return reversed;
+//     }
+//     return reversed;
 
-}
+// }
 
-function longestUniqueSubstring(str){
+// function longestUniqueSubstring(str){
 
-    let map = new Map();
+//     let map = new Map();
 
-    let start=0, maxLength = 0;
+//     let start=0, maxLength = 0;
 
-    for (let end=0; end < str.length; end++){
-        if(map.has(str[end])){
-            start=Math.max(start,map.get(str[end])+1);
+//     for (let end=0; end < str.length; end++){
+//         if(map.has(str[end])){
+//             start=Math.max(start,map.get(str[end])+1);
+//         }
+//         map.set(str[end],end)
+//         maxLength = Math.max(maxLength,end - start + 1)
+//     }
+//     return maxLength;
+
+// }
+
+// console.log(longestUniqueSubstring('aaabbsbdhffjksn'));
+
+function nonRepeatingChar(s){
+
+    for(let i = 0; i < s.length ; i++){
+
+        const char = s[i];
+
+        if(s.indexOf(char) === s.lastIndexOf(char) ){
+
+            return char
+
         }
-        map.set(str[end],end)
-        maxLength = Math.max(maxLength,end - start + 1)
+
     }
-    return maxLength;
+
+    return null;
 
 }
 
-console.log(longestUniqueSubstring('aaabbsbdhffjksn'));
+console.log(nonRepeatingChar('swiss'));

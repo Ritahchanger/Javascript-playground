@@ -21,7 +21,7 @@ const validParanthesis = (str) =>{
         }
     }
 
-    return true;
+    return stack.length === 0;
 
 }
 
