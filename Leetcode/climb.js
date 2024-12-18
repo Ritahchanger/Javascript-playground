@@ -22,3 +22,6 @@ function climbStairs(n){
 }
 
 console.log(climbStairs(5))
+
+// Time complexity :O(n)
+// Space complexity :O(1)
