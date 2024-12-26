@@ -21,3 +21,4 @@ for (let i = 0; i < str.length; i++) {
 
 console.log("Longest Palindrome:", longestPalindrome);
 console.log("Length:", maxLength);
+
