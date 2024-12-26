@@ -1,27 +1,61 @@
-function climbStairs(n){
+function detectCycle(head){
 
-    if(n == 1) return 1;
+    let slow = head;
 
-    let first = 1;
+    let fast = head;
 
-    let second = 2;
+    while(fast && fast.next){
 
-    for(let i=3;i<=n;i++){
+        slow = slow.next;
 
-        let third = first + second;
+        fast = fast.next.next;
 
-        first = second;
+        if(slow === fast){
 
-        second = third
+            removeCycle(slow,head);
+
+            return true;
+
+        }
 
     }
 
-    return second
-
+    return true
 
 }
 
-console.log(climbStairs(5))
 
-// Time complexity :O(n)
-// Space complexity :O(1)
+function removeCycle(loopNode,head){
+
+    let ptr1 = head;
+
+    let ptr2 = loopNode;
+
+    while(ptr1.next !== ptr2.next){
+
+        ptr1 = ptr1.next;
+
+        ptr2 = ptr2.next;
+
+    }
+
+    ptr2.next = null;
+
+}
+
+
+
+
+// Problem: You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. How many distinct ways can you reach the top?
+
+function climbStairs(n) {
+    if (n <= 2) return n;
+    let a = 1, b = 2;
+    for (let i = 3; i <= n; i++) {
+      let temp = a + b;
+      a = b;
+      b = temp;
+    }
+    return b;
+  }
+  

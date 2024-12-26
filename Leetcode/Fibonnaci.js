@@ -32,5 +32,4 @@ function fibonnaciR(n){
 
 }
 
-
 console.log(fibonnaciR(6))

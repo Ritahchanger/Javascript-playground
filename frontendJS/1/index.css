@@ -1,0 +1,31 @@
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+.hamburger-menu span {
+  display: block;
+
+  width: 100%;
+
+  height: 4px;
+
+  background-color: #ccc;
+
+  transition: all 0.3s ease;
+}
+
+
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -9px);
+}
