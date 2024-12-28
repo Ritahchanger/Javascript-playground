@@ -17,3 +17,33 @@ function coinChange(coins, amount) {
     return dp[amount] === Infinity ? -1 : dp[amount];
   }
   
+
+  // Coins problem
+
+function maxCoinsGreedy(coins,amount){
+
+  coins.sort((a,b)=>b-a); //sort coins in descending order
+
+  let count = 0;
+
+
+  for(let coin of coins){
+
+      if(amount >= coin){
+
+          const numCoins = Math.floor(amount / coin);
+
+          count += numCoins;
+
+          amount-=numCoins * coin
+
+      }
+
+  }
+  return amount === 0 ? count : -1;
+
+}
+
+const coins = [1, 2, 5];
+const amount = 11;
+console.log(`Maximum number of coins to make ${amount}:`, maxCoinsGreedy(coins, amount));

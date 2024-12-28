@@ -10,7 +10,4 @@ function flattenArray(arr){
 
 
 
-
-
-
 console.log(flattenArray([1,[2,[3,4],6],7],[1,2,3,4]))
