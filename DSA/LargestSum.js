@@ -22,28 +22,5 @@ function largestSum(nums){
 
 }
 
-function largestSum(nums) {
-    let prevMax = 0;
-    let currMax = 0;
-  
-    nums.forEach(num => {
-      const newMax = Math.max(currMax, prevMax + num);
-      prevMax = currMax;
-      currMax = newMax;
-    });
-  
-    return currMax;
-  }
-  
-  console.log(largestSum([2, 4, 6, 2, 5])); // Output: 13
-  
 
-  function largestSum(nums) {
-    return nums.reduce(
-      ([prevMax, currMax], num) => [currMax, Math.max(currMax, prevMax + num)],
-      [0, 0]
-    )[1];
-  }
-  
-  console.log(largestSum([2, 4, 6, 2, 5])); // Output: 13
   
