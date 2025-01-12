@@ -14,20 +14,32 @@
 // Copy code
 
 
-function passingCars(A) {
+function passingPairs(A){
+
+
     let eastCars = 0;
+
     let passingPairs = 0;
 
-    for (const car of A) {
-        if (car === 0) {
+    for(const car of A){
+
+        if(car === 0){
+
             eastCars++;
-        } else {
-            passingPairs += eastCars;
-            if (passingPairs > 1000000000) {
-                return -1;
+        }else{
+
+            passingPairs+=eastCars
+
+            if(passingPairs > 1000000000000){
+
+                return -1
+
             }
+
         }
+
     }
 
     return passingPairs;
+
 }

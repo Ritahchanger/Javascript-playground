@@ -13,22 +13,23 @@
 // Time Complexity: O(n).
 
 
-function frogRiverOne(X,A){
-
+function frogRiverOne(X, A) {
+    // Create a set to track positions where leaves fall
     const positions = new Set();
 
-    for(let i=0; i<A.length; i++){
-
+    // Loop through the list of leaves
+    for (let i = 0; i < A.length; i++) {
+        // Add the current position to the set
         positions.add(A[i]);
 
-        if(positions.size === X){
-
-            return i
-
+        // Check if all positions are covered (i.e., if the size of the set is X)
+        if (positions.size === X) {
+            // If all positions are covered, return the index (time) when this happens
+            return i;
         }
-
     }
 
+    // If not all positions are covered, return -1
     return -1;
-
+    
 }

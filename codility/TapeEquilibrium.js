@@ -12,17 +12,27 @@
 // Time Complexity: O(n).
 
 
-function tapeEquilibrium(A) {
-    const totalSum = A.reduce((acc, val) => acc + val, 0);
+function tapeEquilibrium(A){
+
+    const totalSum = A.reduce((acc,val)=>acc + val,0);
+
     let leftSum = 0;
+
     let minDiff = Infinity;
 
-    for (let i = 0; i < A.length - 1; i++) {
+    for(let i = 0; i < A.length - 1; i++){
+
         leftSum += A[i];
+
         const rightSum = totalSum - leftSum;
+
         const diff = Math.abs(leftSum - rightSum);
-        minDiff = Math.min(minDiff, diff);
+
+        minDiff = Math.min(minDiff,diff);
+
     }
 
     return minDiff;
+
 }
+

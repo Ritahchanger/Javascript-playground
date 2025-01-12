@@ -16,9 +16,48 @@
 // Copy code
 
 
-function permCheck(A) {
+
+function permCheck(A){
+
     const n = A.length;
+
     const set = new Set(A);
 
+    let max = -Infinity;
+
+    for(let i=0; i < A.length; i++){
+
+        if(A[i] > max ){
+
+            max = A[i];
+
+        }
+
+        if(set.size === n && max === n){
+
+            return 1;
+
+        }
+
+        else{
+
+            return 0;
+
+        }
+
+    }
+
+
+}
+
+
+function permCheck(A) {
+    
+    const n = A.length; 
+    
+    
+    const set = new Set(A);
+    
+   
     return set.size === n && Math.max(...A) === n ? 1 : 0;
 }

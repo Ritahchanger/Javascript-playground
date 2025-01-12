@@ -16,3 +16,6 @@ function binaryGap(N) {
     const gaps = binary.split('1').slice(1, -1);
     return gaps.length > 0 ? Math.max(...gaps.map(gap => gap.length)) : 0;
 }
+
+
+
