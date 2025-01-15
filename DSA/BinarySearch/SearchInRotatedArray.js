@@ -10,8 +10,10 @@ function search(nums,target){
 
         if(nums[mid] === target) return mid;
 
-        if(nums[left] <= nums[mid] ){
 
+        if(nums[left] <= nums[mid] ){
+             
+            
 
         }
 

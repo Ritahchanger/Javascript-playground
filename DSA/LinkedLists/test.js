@@ -1,15 +1,14 @@
-function findMissingNumber(arr){
+const missingNumber = (nums) =>{
 
-    const n = arr.length + 1;
+    const n = nums.length;
 
-    const expectedSum = (n * (n+1)) / 2;
+    const totalSum = (n * (n  + 1)) / 2
+    
+    const arrSum = nums.reduce((a,b)=>a+b,0);
 
-    const actualSum = arr.reduce((sum,num)=>sum+num,0);
-
-    return expectedSum - actualSum;
+    return totalSum - arrSum;
 
 }
 
-const numbers = [1,2,3,4,5,6,7,9];
 
-console.log(findMissingNumber(numbers))
+console.log(missingNumber([0,1,2,3,4,5,7]))

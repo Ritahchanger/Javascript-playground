@@ -17,7 +17,7 @@ function reverseLinkedList(head){
 
     let current = head;
 
-    while(current!==null){
+    while( current!==null ){
 
         const nextNode = current.next;
 

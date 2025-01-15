@@ -8,8 +8,11 @@
 // Code:
 
 function spiralPlayground(playground) {
+
   let result = [];
+
   let top = 0,
+  
     bottom = playground.length - 1;
   let left = 0,
     right = playground[0].length - 1;

@@ -1,5 +1,4 @@
 // Find the squareroot of a non negative number!
-
 function mySqrt(x){
 
     if(x < 2) return x;
@@ -21,11 +20,9 @@ function mySqrt(x){
             right = mid - 1
 
         }
-
     }
 
     return right;
 
 }
-
 console.log(mySqrt(17))

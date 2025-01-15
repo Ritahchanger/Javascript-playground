@@ -6,17 +6,20 @@
 // Count the height of the left side and right side.
 // Return the bigger height + 1 (for the root).
 
-function maxDepth(tree) {
-    
-  if (!tree) return 0;
+
+const maxDepth = (tree) =>{
+
+  if(!tree) return 0;
 
   let leftHeight = maxDepth(tree.left);
 
   let rightHeight = maxDepth(tree.right);
 
-  return Math.max(leftHeight, rightHeight) + 1;
+  return Math.max(leftHeight,rightHeight) + 1
 
 }
+
+
 
 const treeExample = {
   value: 1,

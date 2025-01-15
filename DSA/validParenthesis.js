@@ -1,28 +1,32 @@
-const validParanthesis = (str) =>{
+const validParenthesis = (str) =>{
 
     const map = {
-        ')':'(',
+        '}':'{',
         ']':'[',
-        '}':'{'
+        ')':'('
     }
 
-    let stack = [];
+    const stack = []
 
     for(let item of str){
-        if(item === '(' || item === '[' || item==='{'){
 
-            stack.push(item);
+        if(item === '{' || item=== '(' || item === '['){
 
-        }
-        else{
-            if(stack.length === 0 || stack.pop()!==map[item]){
+            stack.push(item)
+
+        }else{
+
+            if(stack.length === 0 || stack.pop() !== map[item]){
+
                 return false;
             }
+
         }
+
     }
 
-    return stack.length === 0;
+    return stack.length === 0
 
 }
 
-console.log(validParanthesis('{}'));
+console.log(validParenthesis('{}}'))
