@@ -1,13 +1,10 @@
 //Check if a linkedList has a cycle and remove it
 class ListNode{
-
     constructor(value){
         this.value = value;
         this.next = null;
     }
-
 }
-
 function detectCycle(head){
 
     let slow = head;

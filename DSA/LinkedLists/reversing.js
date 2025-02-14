@@ -1,9 +1,9 @@
 // Use 3 pointers: prev, current, next
-function reverseLinkedList(head){
-    
+function reverseLinkedList(linkedlist){
+
     let prev = null;
 
-    let current = head;
+    let current = linkedlist;
 
     while(current!==null){
 
@@ -13,10 +13,12 @@ function reverseLinkedList(head){
 
         prev = current;
 
-        current = nextNode;
+        current = nextNode
 
     }
 
     return prev;
 
 }
+
+

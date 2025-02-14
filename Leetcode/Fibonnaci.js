@@ -24,12 +24,28 @@ console.log(fibonnaci(6));
 
 // Using recursion
 
-function fibonnaciR(n){
+// function fibonnaciR(n){
+
+//     if(n <= 1) return n;
+
+//     return fibonnaci(n-1) + fibonnaci(n-2)
+
+// }
+
+// console.log(fibonnaciR(6))
+
+// Using dynamic programming
+
+function fibonnacci(n,memo={}){
+
 
     if(n <= 1) return n;
 
-    return fibonnaci(n-1) + fibonnaci(n-2)
+    if(n in memo) return memo[n];
+
+    memo[n] = fibonnacci(n-1,memo) + fibonnacci(n-2,memo);
+
+    return memo[n]
 
 }
 
-console.log(fibonnaciR(6))

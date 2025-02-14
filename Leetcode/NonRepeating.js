@@ -1,23 +1,25 @@
-// first non repeating character in a string
+// Given a string, write a function that returns the first non-repeating character. If there is no non-repeating character, return null.
+function firstNonRepeating(str){
 
-function firstNonRepeatingChar(str){
+    const charCount = {};
 
-    for(let i = 0; i<str.length;i++){
+    for(let i=0; i<str.length;i++){
 
+        charCount[str[i]] = (charCount[str[i]] || 0 ) + 1;
 
-        const char = str[i]
+    }
+    for(let i=0; i< str.length; i++){
 
-        if(str.indexOf(char) === str.lastIndexOf(char)){
+        if(charCount[str[i]] === 1){
 
-            return char
+            return str[i];
+
         }
 
     }
 
-    return null
+    return null;
 
 }
 
-
-console.log(firstNonRepeatingChar("swiss"))
-console.log(firstNonRepeatingChar("aabbcc"))
+console.log(firstNonRepeating("swiss"));

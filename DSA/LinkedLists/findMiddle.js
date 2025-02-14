@@ -14,4 +14,5 @@ function findMiddle(head){
     }
 
     return slow
+    
 }

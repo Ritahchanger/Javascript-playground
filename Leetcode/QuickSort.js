@@ -5,6 +5,7 @@ function quickSort(arr){
         return arr;
 
     }
+    
     let pivot = arr[arr.length - 1];
 
     let left = [];

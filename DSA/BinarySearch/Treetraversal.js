@@ -8,6 +8,7 @@ class Node{
 }
 
 class BinaryTree{
+    
     constructor(){
         this.root = null;
     }
@@ -73,8 +74,11 @@ class BinaryTree{
 
         if(value === node.value ) return true;
 
+
         if(value < node.value){
+
             return this.search(value,node.left)
+            
         }else{
             return this.search(value,node.right)
         }

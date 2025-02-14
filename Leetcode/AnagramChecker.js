@@ -17,8 +17,8 @@
 // console.log(checkAnagram("hello","world"))
 
 function checkAnagram(str1,str2){
-
-    let srt2Reversed = str2.toLowerCase().split('').reverse().join();
+    
+    let srt2Reversed = str2.toLowerCase().split('').reverse().join('');
 
     return str1.toLowerCase() === srt2Reversed;
 

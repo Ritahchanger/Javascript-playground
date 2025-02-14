@@ -2,24 +2,27 @@
 
 
 
-function binarySearch(arr,target){
+// function binarySearch(arr,target){
 
-    let left = 0;
+//     let left = 0;
 
-    let right = arr.length - 1;
+//     let right = arr.length - 1;
 
-    while(left <= right){
+//     while(left <= right){
 
-        const mid = Math.floor(left + right) / 2
+//         const mid = Math.floor(left + right) / 2
 
-        if(arr[mid] === target ) return mid;
+//         if(arr[mid] === target ) return mid;
 
-        if(arr[mid] < target ) left = mid + 1
+//         if(arr[mid] < target ) left = mid + 1
 
-        else right = mid - 1
+//         else right = mid - 1
 
-    }
+//     }
 
-}
+// }
 
-console.log(binarySearch([1,2,3,4,11,17,27],11))
+// console.log(binarySearch([1,2,3,4,11,17,27],11))
+
+
+

@@ -18,9 +18,7 @@ function largestSum(nums){
 
     }
 
-    return currMax
+    return currMax;
 
 }
-
-
   

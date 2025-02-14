@@ -12,7 +12,6 @@ function search(nums,target){
 
 
         if(nums[left] <= nums[mid] ){
-             
             
 
         }

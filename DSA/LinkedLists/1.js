@@ -1,11 +1,8 @@
 class Node{
 
-    constructor(data){
-
-        this.data = data;
-
-        this.next = null;
-
+    constructor(val){
+        this.value = val;
+        this.next = null
     }
 
 }
@@ -14,61 +11,61 @@ class LinkedList{
 
     constructor(){
 
-        this.head = null;
-
+        this.head = null
     }
 
-    traverse(){
+    append(value){
+
+        const newNode = new Node(value);
+
+        if(this.head === null){
+
+            this.head = newNode;
+
+            return this.head;
+
+        }
 
         let current = this.head;
 
-        while(current!==null){
-
-            console.log(current.data);
+        while(current.next !== null){
 
             current = current.next;
 
         }
 
+        current.next = newNode;
+
+        return this.head;
+    }
+
+
+    printList(){
+
+        let current = this.head;
+
+        const result = [];
+
+        while(current){
+            result.push(current.value);
+            current = current.next;
+        }
+
+        console.log(result.join("   ->   "));
+
     }
 
 }
 
+const myList = new LinkedList();
 
-class ListNode{
+myList.append(90)
+myList.append(80)
+myList.append(70)
+myList.append(60)
+myList.append(50)
+myList.append(50)
+myList.append(50)
+myList.append(50)
 
-    constructor(value){
-        this.value = value;
-        this.next = null
-    }
-
-}
-let head = new ListNode(1)
-
-head.next = new ListNode(2)
-
-head.next.next = new ListNode(3)
-
-console.log(head)
-
-function reverseLinkedList(head){
-
-    let prev = null;
-
-    let current = head;
-
-    while(current!==null){
-
-        let nextKid = current.next;
-
-        current.next = prev;
-
-        prev = current;
-
-        current = nextKid
-
-    }
-
-    return prev;
-
-}
+myList.printList()

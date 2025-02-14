@@ -3,14 +3,31 @@
 
 function inorderTraversal(root) {
     const result = [];
-    function traverse(node) {
-      if (node) {
-        traverse(node.left);
-        result.push(node.val);
-        traverse(node.right);
+    function traverse(root) {
+      if (root) {
+        traverse(root.left);
+        result.push(root.val);
+        traverse(root.right);
       }
     }
     traverse(root);
     return result;
   }
   
+
+  function inOrderTraversal(root){
+
+    if(root){
+
+      const result = []
+
+      inOrderTraversal(root.left);
+
+      result.push(root.value);
+
+      inOrderTraversal(root.right)
+
+
+    }
+
+  }

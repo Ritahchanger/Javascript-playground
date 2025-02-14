@@ -1,5 +1,8 @@
 // How do you check if two trees are identical?
+
+
 // Solution use, recursion to compare the nodes of both tree
+
 
 function areIdentical(tree1,tree2){
 
@@ -15,6 +18,8 @@ function areIdentical(tree1,tree2){
 
 }
 
+
 // Time complexity 0(n) every node is compared
+
 
 // Space complexity 0(h) due to recursion stack!

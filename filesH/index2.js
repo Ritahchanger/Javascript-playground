@@ -19,8 +19,6 @@ fs.readFile(path.join(__dirname,'files','starter.txt'),'utf8',(err,data)=>{
 }) 
 
 
-
-
 fs.writeFile(path.join(__dirname,'files','reply.txt'),"Nice to meet you",(err)=>{
 
     if(err){
