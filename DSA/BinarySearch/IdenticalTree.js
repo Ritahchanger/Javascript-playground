@@ -8,7 +8,7 @@ function areIdentical(tree1,tree2){
 
     if(!tree1 && !tree2) return true;
 
-    if(!tree1 && !tree2) return false;
+    if(!tree1 || !tree2) return false;
 
     return (
 
