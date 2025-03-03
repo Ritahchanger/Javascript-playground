@@ -2,7 +2,10 @@ const fs = require("fs");
 
 const path = require("path");
 
+const https = require("https")
+
 console.time("Execution Time");
+
 
 const readStream = fs.createReadStream(path.join(__dirname,"largeFile.txt"));
 
@@ -44,19 +47,41 @@ console.timeEnd("Execution Time");
 // }
 
 
+// const fetchUsers = () => {
+
+//     fetch("https://jsonplaceholder.typicode.com/posts").then(response=>{
+
+//         if(!response.ok){
+
+//             throw new Error("Networt response was not ok")
+
+//         }
+//         return response.json();
+//     }).then(data=>console.table(data)).catch((error)=>{
+
+//         console.error("Error fetching users: ",error);
+
+//     })
+
+// }
+
+
 const fetchUsers = () => {
+    https.get("https://jsonplaceholder.typicode.com/posts", (res) => {
+        let data = "";
 
-    fetch("https://jsonplaceholder.typicode.com/posts").then(response=>{
+        res.on("data", (chunk) => {
+            data += chunk;
+        });
 
-        if(!response.ok){
+        res.on("end", () => {
+            console.table(JSON.parse(data));
+        });
+    }).on("error", (error) => {
+        console.error("Error fetching users:", error);
+    });
+};
 
-            throw new Error("Networt response was not ok")
-
-        }
-        return response.json();
-    }).then(data=>console.table(data))
-
-}
 
 
 console.time("Execution time");
