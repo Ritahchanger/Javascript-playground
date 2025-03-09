@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep DOM Manipulation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .box {
+        width: 200px;
+        height: 50px;
+        background: lightblue;
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .highlight {
+        background: yellow;
+      }
+      .remove-me {
+        background: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Hello, World!</h1>
+    <button id="btn">Click Me</button>
+    <button id="add-box">Add Box</button>
+    <button id="remove-box">Remove Box</button>
+
+    <div id="container">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <script src="index.js"></script>
+  </body>
+</html>
