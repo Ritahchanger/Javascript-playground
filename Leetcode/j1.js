@@ -1,6 +1,7 @@
 // substract the product and sum of digits of an integer
 
 var substractProductAndSum = function (n) {
+  
   let nArray = n.toString().split("");
 
   let sum = 0;

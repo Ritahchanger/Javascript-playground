@@ -1,12 +1,13 @@
-function binaryGap(N){
-    let binary = N.toString(2);
+function maxGold(treausures){
 
+    let maxGold = treausures[0];
 
-    let gaps = binary.split('1');
-    if(binary.endsWith('0')){
-        gaps.pop();
+    let currentGold = treausures[0];
+
+    for(let i=1; i < treausures.length; i++){
+
+        currentGold = Math.max
+
     }
 
-    return gaps.length > 0 ? Math.max(...gaps.map(g=>g.length)) : 0
 }
-console.log(binaryGap(1041));

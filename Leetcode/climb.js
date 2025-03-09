@@ -20,7 +20,7 @@ function detectCycle(head){
 
     }
 
-    return true
+    return false;
 
 }
 
