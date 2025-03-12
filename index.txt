@@ -1,0 +1,6 @@
+🎯 4. OOP Best Practices in JavaScript
+✔ Use classes instead of constructor functions for better readability.
+✔ Use prototypes to avoid duplicate methods in instances.
+✔ Keep data private using # or closures.
+✔ Use inheritance wisely—avoid deep inheritance chains.
+✔ Follow SOLID principles (Single Responsibility, Open-Closed, etc.).

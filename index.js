@@ -1,13 +1,39 @@
-function maxGold(treausures){
+class Animal{
 
-    let maxGold = treausures[0];
+    makeSound(){
 
-    let currentGold = treausures[0];
-
-    for(let i=1; i < treausures.length; i++){
-
-        currentGold = Math.max
+        console.log("Animal makes sound");
 
     }
 
 }
+
+
+class Dog extends Animal{
+
+    makeSound(){
+
+        console.log("Woof! Woof!");
+
+    }
+
+}
+
+class Cat extends Animal{
+
+    makeSound(){
+
+        console.log("Meow!");
+
+    }
+
+}
+
+const dog = new Dog();
+
+dog.makeSound();
+
+
+const cat = new Cat();
+
+cat.makeSound()
