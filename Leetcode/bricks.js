@@ -1,6 +1,7 @@
 // We need to redistribute bricks across N boxes so that each box contains exactly 10 bricks. We can only move bricks one step at a time to adjacent boxes. The goal is to determine the minimum number of moves required or return -1 if it's impossible.
 function solution(A){
 
+
     let N = A.length;
 
     let bricksTotal = A.reduce((acc,cur)=>acc + cur, 0);
