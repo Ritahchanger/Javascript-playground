@@ -3,21 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Camera Access</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Camera App</title>
   </head>
   <body>
-    <div class="flex">
-      <video id="video" autoplay></video>
-      <canvas id="canvas"></canvas>
-    </div>
-    <br />
-    <button id="start">Start Camera</button>
-    <button id="stop">Stop Camera</button>
-    <button id="capture">Capture Image</button>
-
-    <div id="captured-images">
-
+    <div class="container">
+      <div class="video-container">
+        <video id="video" autoplay></video>
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="buttons">
+        <button id="start">Start Camera</button>
+        <button id="stop" disabled>Stop Camera</button>
+        <button id="snap" disabled>Snap Image</button>
+      </div>
+      <video id="live-stream"></video>
+      <div class="buttons">
+        <button id="start-live-stream">Start Livestream</button>
+        <button id="stop-live-stream" disabled>Stop Livestream</button>
+      </div>
+      <video id="record-video"></video>
+      <div class="buttons">
+        <button id="start-record-stream">Start Recordstream</button>
+        <button id="stop-record-stream" disabled>Stop Recordstream</button>
+      </div>
     </div>
 
     <script src="index.js"></script>

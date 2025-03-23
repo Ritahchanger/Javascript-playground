@@ -6,11 +6,8 @@ function factorialPermutation(n){
 
     }
 
-
     return n * factorialPermutation(n - 1);
 
 }
-
-
 
 console.log(factorialPermutation(5))

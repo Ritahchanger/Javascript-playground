@@ -1,98 +1,216 @@
+const video = document.getElementById("video");
+
+const recordVideo = document.getElementById("record-video");
+
+const canvas = document.getElementById("canvas");
+
 const startButton = document.getElementById("start");
 
 const stopButton = document.getElementById("stop");
 
-const captureButton = document.getElementById("capture");
+const snapButton = document.getElementById("snap");
+
+const liveStream = document.getElementById("live-stream");
+
+const startLiveStreamButton = document.getElementById("start-live-stream");
+
+const stopLiveStreamButton = document.getElementById("stop-live-stream");
+
+const startRecordButton = document.getElementById("start-record-stream");
+
+const stopRecordButton = document.getElementById("stop-record-stream");
 
 
-const video = document.getElementById("video");
+let mediaStream = null;
 
+let mediaRecorder = null;
 
-const canvas = document.getElementById("canvas");
-
-
-
-const imagesContainer = document.getElementById("captured-images");
-
-
-
+let recordedChunks = [];
 
 const startCamera = async () =>{
 
-    const stream = await navigator.mediaDevices.getUserMedia({video:true});
+    try{
 
-    video.srcObject = stream;
+        const stream = await navigator.mediaDevices.getUserMedia({video:true});
+
+        video.srcObject = stream;
+
+        startButton.disabled = true;
+
+        stopButton.disabled = false;
+
+        snapButton.disabled = false;
 
 
-    startButton.disabled = true;
+    }catch(error){
 
+        console.log(`There was an error connecting the camera ${error.message}`);
 
-    stopButton.disabled = false;
-
+    }
 
 }
 
 const stopCamera = async () =>{
 
-    const stream = video.srcObject;
+    try{
 
-    if(stream){
+        if(video.srcObject){
 
-        stream.getTracks().forEach((track)=>{
+            const stream  = video.srcObject;
 
-            track.stop()
+            stream.getTracks().forEach((track)=>{
 
-        })
+                track.stop();
+            })
 
-        video.srcObject = null;
+            video.srcObject = null;
 
-        startButton.disabled = false;
+            startButton.disabled = false;
 
-        stopButton.disabled = true;
+            stopButton.disabled = true;
+
+            snapButton.disabled = true;
+
+        }
+
+
+    }catch(error){
+
+        console.log(`There was an error connecting the camera ${error.message}`);
 
     }
-
 
 }
 
+const takeSnapShot = () =>{
 
-const captureImage = () =>{
+    if(!video.srcObject) return;
 
-    if(!video.srcObject){
-
-        alert("The camera is not running");
-
-        return;
-
-    }
+    const context = canvas.getContext("2d");
 
     canvas.width = video.videoWidth;
 
     canvas.height = video.videoHeight;
 
-    const context = canvas.getContext("2d");
-
-    context.drawImage(video,0,0,canvas.width,canvas.height);
+    context.drawImage(video,0,0,canvas.width, canvas.height);
 
     const imageUrl = canvas.toDataURL("image/png");
 
-    const img = document.createElement("img");
+    const downloadLink = document.createElement("a");
 
+    downloadLink.href = imageUrl;
 
-    img.src = imageUrl;
+    downloadLink.download = "snapshot.png";
 
-    imagesContainer.appendChild(img);
+    downloadLink.textContent = "Download snapshot";
 
-    console.log(imageUrl);
+    downloadLink.style.display = "block";
 
+    downloadLink.style.marginTop = "10px";
+
+    document.body.appendChild(downloadLink);
 
 }
 
 
-
 startButton.addEventListener("click",startCamera)
+
 
 stopButton.addEventListener("click",stopCamera)
 
-captureButton.addEventListener("click",captureImage)
+snapButton.addEventListener("click",takeSnapShot)
 
+
+const startLiveStream = async () =>{
+
+    try{
+
+        if(!mediaStream){
+
+            mediaStream  = await navigator.mediaDevices.getUserMedia({video:true,audio:true});
+
+        }
+
+        liveStream.srcObject = mediaStream;
+
+        liveStream.play();
+
+
+        startLiveStreamButton.disabled = true;
+
+        stopLiveStreamButton.disabled = false;
+
+
+    }catch(error){
+
+        console.log(`Error startin live stream: ${error.message}`);
+
+    }
+
+}
+
+const stopLiveStream = () =>{
+
+    try{
+
+        if(mediaStream){
+
+            liveStream.srcObject = null;
+
+        }
+
+        startLiveStreamButton.disabled = false;
+
+        stopLiveStreamButton.disabled = true;
+
+    }catch(error){
+
+        console.error(`Error stopping live stream: ${error.message}`);
+
+    }
+
+}
+
+startLiveStreamButton.addEventListener("click", startLiveStream);
+
+stopLiveStreamButton.addEventListener("click", stopLiveStream);
+
+
+
+const startRecording = async () => {
+    
+    try{
+
+        if(!mediaStream){
+            mediaStream = await navigator.getUserMedia({video:true, audio:true});
+        }
+
+        mediaRecorder = new MediaRecorder(mediaStream);
+
+        recordedChunks = [];
+
+        mediaRecorder.ondataavailable = (event) =>{
+
+            if(event.data.size > 0){
+
+                recordedChunks.push(event.data);
+
+            }
+
+        }
+
+        mediaRecorder.onstop = () =>{
+
+            const recordedBlob = new Blob(recordedChunks, {type:"video/webm"});
+
+            const videoUrl = URL.createObjectURL(recordedBlob)
+
+        }
+
+    }catch(error){
+
+        console.log(`Error starting recording: ${error.message}`);
+
+    }
+
+}
