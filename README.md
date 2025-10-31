@@ -1,8 +1,8 @@
-# JavaScript Playground 🚀
+# JavaScript Playground 
 
 A comprehensive collection of JavaScript, TypeScript, React, and Node.js projects, algorithms, and coding challenges. This repository serves as both a learning resource and a reference for various programming concepts and implementations.
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Repository Structure](#repository-structure)
@@ -64,7 +64,7 @@ Javascript-playground/
 
 ## Core Topics
 
-### 🧮 Data Structures & Algorithms
+### Data Structures & Algorithms
 
 #### [DSA](./DSA/)
 Fundamental data structures and algorithms implementations.
@@ -193,7 +193,7 @@ Caching strategies and implementations.
 - Redis integration
 - Cache invalidation strategies
 
-### 🔐 Authentication & Security
+### Authentication & Security
 
 #### [OAuth](./oauth/)
 OAuth implementation examples.
@@ -256,7 +256,7 @@ TypeScript implementations and examples.
 - Generics
 - Advanced types
 
-### 🎯 Interview Preparation
+### Interview Preparation
 
 #### [Preparations](./preparations/)
 Interview preparation materials and strategies.
