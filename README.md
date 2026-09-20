@@ -20,45 +20,52 @@ This repository contains a wide range of JavaScript projects, from fundamental c
 
 ```
 Javascript-playground/
-├── DSA/                          # Data Structures & Algorithms
-├── Leetcode/                     # LeetCode problem solutions
-├── amazon/                       # Amazon interview questions
-├── codility/                     # Codility challenges
-├── arrays/                       # Array manipulation problems
-├── strings/                      # String algorithms
-├── objects/                      # Object-oriented programming
-├── hooks/                        # React Hooks examples
-├── statemanagement/              # State management patterns
-├── statemanagement2/             # Redux + TypeScript state management
-├── advancedstatemanagement/      # Advanced state management
-├── react-tuto/                   # React tutorials
-├── frontendJS/                   # Frontend JavaScript concepts
-├── backendjs/                    # Backend JavaScript/Node.js
-├── nodecore/                     # Node.js core concepts
-├── apis/                         # API implementations
-├── oauth/                        # OAuth authentication
-├── githubAuth/                   # GitHub authentication
-├── social_authentication/        # Social auth integrations
-├── rolesbased/                   # Role-based access control
-├── Caching/                      # Caching strategies
-├── usingPrisma/                  # Prisma ORM examples
-├── animations/                   # Animation projects
-├── forms/                        # Form handling
-├── filesH/                       # File handling
-├── media/                        # Media processing
-├── SimpleGames/                  # Simple game implementations
-├── modernlandingpage/            # Modern landing page designs
-├── web-meeting-server1/          # Web meeting server
-├── Todo2/                        # Todo application v2
-├── todoApp/                      # Todo application
-├── Ts/                          # TypeScript projects
-├── classes/                      # JavaScript classes
-├── corejs/                       # Core JavaScript concepts
-├── General/                      # General programming concepts
-├── js1/                         # JavaScript fundamentals
-├── Hoisting/                    # Hoisting concepts
-├── ErrorHandling/               # Error handling patterns
-├── preparations/                # Interview preparations
+├── algorithms-dsa/               # Data structures, algorithms & interview practice
+│   ├── DSA/
+│   ├── Leetcode/
+│   ├── amazon/
+│   ├── codility/
+│   ├── arrays/
+│   ├── strings/
+│   └── preparations/
+├── js-fundamentals/              # Core language concepts
+│   ├── js1/
+│   ├── corejs/
+│   ├── classes/
+│   ├── objects/
+│   ├── Hoisting/
+│   ├── ErrorHandling/
+│   └── General/
+├── react-frontend/                # React, state management & frontend UI
+│   ├── hooks/
+│   ├── statemanagement/
+│   ├── statemanagement2/
+│   ├── advancedstatemanagement/
+│   ├── react-tuto/
+│   ├── frontendJS/
+│   ├── animations/
+│   ├── forms/
+│   └── modernlandingpage/
+├── backend-node/                 # Node.js, APIs, databases & caching
+│   ├── backendjs/
+│   ├── nodecore/
+│   ├── apis/
+│   ├── usingPrisma/
+│   ├── Caching/
+│   └── web-meeting-server1/
+├── auth-security/                # Authentication & access control
+│   ├── oauth/
+│   ├── githubAuth/
+│   ├── social_authentication/
+│   └── rolesbased/
+├── projects/                     # Small full applications
+│   ├── todoApp/
+│   ├── Todo2/
+│   └── SimpleGames/
+├── files-media/                  # File system & media handling
+│   ├── filesH/
+│   └── media/
+├── typescript/                   # TypeScript examples
 └── LICENSE
 ```
 
@@ -66,10 +73,10 @@ Javascript-playground/
 
 ### Data Structures & Algorithms
 
-#### [DSA](./DSA/)
+#### [DSA](./algorithms-dsa/DSA/)
 Fundamental data structures and algorithms implementations.
 
-#### [Leetcode](./Leetcode/)
+#### [Leetcode](./algorithms-dsa/Leetcode/)
 Solutions to LeetCode problems with detailed explanations.
 
 **Key Solutions:**
@@ -94,7 +101,7 @@ Solutions to LeetCode problems with detailed explanations.
 - `ReverseLinkedList.js`, `spiralMatrix.js`, `Sudoku.js`
 - `validParenthesis.js`, and many more!
 
-#### [Amazon Interview Questions](./amazon/)
+#### [Amazon Interview Questions](./algorithms-dsa/amazon/)
 Common interview questions asked at Amazon.
 - LRU Cache implementation
 - Merge Sorted Arrays
@@ -102,7 +109,7 @@ Common interview questions asked at Amazon.
 - Tree problems
 - Two Sum variants
 
-#### [Codility Challenges](./codility/)
+#### [Codility Challenges](./algorithms-dsa/codility/)
 Solutions to Codility coding challenges.
 - `BinaryGap.js` - Binary representation problems
 - `FrogRiverOne.js` - Array traversal
@@ -112,61 +119,61 @@ Solutions to Codility coding challenges.
 - `RateLimiter.js` - Rate limiting implementation
 - `TapeEquilibrium.js` - Array splitting
 
-#### [Arrays](./arrays/)
+#### [Arrays](./algorithms-dsa/arrays/)
 Array manipulation techniques and algorithms.
 
-#### [Strings](./strings/)
+#### [Strings](./algorithms-dsa/strings/)
 String processing and manipulation problems.
 
 ### ⚛️ React & Frontend
 
-#### [React Tutorials](./react-tuto/)
+#### [React Tutorials](./react-frontend/react-tuto/)
 Comprehensive React.js tutorials and examples.
 
-#### [Hooks](./hooks/)
+#### [Hooks](./react-frontend/hooks/)
 React Hooks implementations and patterns.
 - useState, useEffect, useContext
 - Custom hooks
 - Hook composition
 
-#### [State Management](./statemanagement/)
+#### [State Management](./react-frontend/statemanagement/)
 Basic state management patterns in React.
 
-#### [State Management v2](./statemanagement2/)
+#### [State Management v2](./react-frontend/statemanagement2/)
 Redux + TypeScript state management built with Vite.
 
-#### [Advanced State Management](./advancedstatemanagement/)
+#### [Advanced State Management](./react-frontend/advancedstatemanagement/)
 Advanced state management techniques.
 - Redux patterns
 - Context API advanced usage
 - State machines
 - Zustand, Recoil implementations
 
-#### [Frontend JavaScript](./frontendJS/)
+#### [Frontend JavaScript](./react-frontend/frontendJS/)
 Frontend-specific JavaScript concepts.
 - DOM manipulation
 - Event handling
 - Browser APIs
 - Performance optimization
 
-#### [Animations](./animations/)
+#### [Animations](./react-frontend/animations/)
 Animation implementations and libraries.
 - CSS animations
 - JavaScript animations
 - Animation libraries
 
-#### [Forms](./forms/)
+#### [Forms](./react-frontend/forms/)
 Form handling and validation.
 
-#### [Modern Landing Page](./modernlandingpage/)
+#### [Modern Landing Page](./react-frontend/modernlandingpage/)
 Modern landing page designs and implementations.
 
 ### 🔧 Backend & Node.js
 
-#### [Backend JavaScript](./backendjs/)
+#### [Backend JavaScript](./backend-node/backendjs/)
 Backend JavaScript concepts and implementations.
 
-#### [Node.js Core](./nodecore/)
+#### [Node.js Core](./backend-node/nodecore/)
 Core Node.js concepts and modules.
 - Event loop
 - Streams
@@ -174,20 +181,20 @@ Core Node.js concepts and modules.
 - File system
 - Networking
 
-#### [APIs](./apis/)
+#### [APIs](./backend-node/apis/)
 API development and integration.
 - RESTful APIs
 - GraphQL
 - API design patterns
 
-#### [Using Prisma](./usingPrisma/)
+#### [Using Prisma](./backend-node/usingPrisma/)
 Prisma ORM examples and best practices.
 - Schema design
 - Migrations
 - Queries
 - Relations
 
-#### [Caching](./Caching/)
+#### [Caching](./backend-node/Caching/)
 Caching strategies and implementations.
 - In-memory caching
 - Redis integration
@@ -195,61 +202,61 @@ Caching strategies and implementations.
 
 ### Authentication & Security
 
-#### [OAuth](./oauth/)
+#### [OAuth](./auth-security/oauth/)
 OAuth implementation examples.
 
-#### [GitHub Authentication](./githubAuth/)
+#### [GitHub Authentication](./auth-security/githubAuth/)
 GitHub OAuth integration.
 
-#### [Social Authentication](./social_authentication/)
+#### [Social Authentication](./auth-security/social_authentication/)
 Social media authentication implementations.
 - Google Auth
 - Facebook Auth
 - Twitter Auth
 
-#### [Role-Based Access](./rolesbased/)
+#### [Role-Based Access](./auth-security/rolesbased/)
 Role-based access control (RBAC) implementations.
 
 ### 📱 Applications
 
-#### [Todo App](./todoApp/)
+#### [Todo App](./projects/todoApp/)
 Full-featured todo application.
 
-#### [Todo v2](./Todo2/)
+#### [Todo v2](./projects/Todo2/)
 Enhanced version of todo application.
 
-#### [Simple Games](./SimpleGames/)
+#### [Simple Games](./projects/SimpleGames/)
 Simple game implementations in JavaScript.
 
-#### [Web Meeting Server](./web-meeting-server1/)
+#### [Web Meeting Server](./backend-node/web-meeting-server1/)
 Web-based meeting server implementation.
 
 ### 💻 Core JavaScript Concepts
 
-#### [Core JS](./corejs/)
+#### [Core JS](./js-fundamentals/corejs/)
 Fundamental JavaScript concepts.
 
-#### [JavaScript Fundamentals](./js1/)
+#### [JavaScript Fundamentals](./js-fundamentals/js1/)
 Basic JavaScript programming concepts.
 
-#### [Classes](./classes/)
+#### [Classes](./js-fundamentals/classes/)
 JavaScript classes and OOP.
 
-#### [Objects](./objects/)
+#### [Objects](./js-fundamentals/objects/)
 Object-oriented programming in JavaScript.
 
-#### [Hoisting](./Hoisting/)
+#### [Hoisting](./js-fundamentals/Hoisting/)
 Understanding JavaScript hoisting.
 
-#### [Error Handling](./ErrorHandling/)
+#### [Error Handling](./js-fundamentals/ErrorHandling/)
 Error handling patterns and best practices.
 
-#### [General Programming](./General/)
+#### [General Programming](./js-fundamentals/General/)
 General programming concepts and patterns.
 
 ### 📘 TypeScript
 
-#### [TypeScript Projects](./Ts/)
+#### [TypeScript Projects](./typescript/)
 TypeScript implementations and examples.
 - Type definitions
 - Interfaces
@@ -258,7 +265,7 @@ TypeScript implementations and examples.
 
 ### Interview Preparation
 
-#### [Preparations](./preparations/)
+#### [Preparations](./algorithms-dsa/preparations/)
 Interview preparation materials and strategies.
 
 ## Learning Path
@@ -329,16 +336,16 @@ cd Javascript-playground
 2. **Choose a topic to explore**
 ```bash
 # For DSA practice
-cd Leetcode
+cd algorithms-dsa/Leetcode
 
 # For React learning
-cd react-tuto
+cd react-frontend/react-tuto
 
 # For backend development
-cd nodecore
+cd backend-node/nodecore
 
 # For interview prep
-cd preparations
+cd algorithms-dsa/preparations
 ```
 
 3. **Run examples**
@@ -354,29 +361,29 @@ npm start
 ## Project Categories
 
 ### 🎓 Learning & Practice
-- [DSA](./DSA/)
-- [Leetcode](./Leetcode/)
-- [Core JS](./corejs/)
-- [JavaScript Fundamentals](./js1/)
+- [DSA](./algorithms-dsa/DSA/)
+- [Leetcode](./algorithms-dsa/Leetcode/)
+- [Core JS](./js-fundamentals/corejs/)
+- [JavaScript Fundamentals](./js-fundamentals/js1/)
 
 ### 💼 Interview Preparation
-- [Amazon](./amazon/)
-- [Codility](./codility/)
-- [Preparations](./preparations/)
-- [Leetcode](./Leetcode/)
+- [Amazon](./algorithms-dsa/amazon/)
+- [Codility](./algorithms-dsa/codility/)
+- [Preparations](./algorithms-dsa/preparations/)
+- [Leetcode](./algorithms-dsa/Leetcode/)
 
 ### 🏗️ Full Projects
-- [Todo App](./todoApp/)
-- [Modern Landing Page](./modernlandingpage/)
-- [Web Meeting Server](./web-meeting-server1/)
-- [Simple Games](./SimpleGames/)
+- [Todo App](./projects/todoApp/)
+- [Modern Landing Page](./react-frontend/modernlandingpage/)
+- [Web Meeting Server](./backend-node/web-meeting-server1/)
+- [Simple Games](./projects/SimpleGames/)
 
 ### 📚 Tutorials & Guides
-- [React Tutorials](./react-tuto/)
-- [Hooks](./hooks/)
-- [State Management](./statemanagement/)
-- [State Management v2](./statemanagement2/)
-- [Node.js Core](./nodecore/)
+- [React Tutorials](./react-frontend/react-tuto/)
+- [Hooks](./react-frontend/hooks/)
+- [State Management](./react-frontend/statemanagement/)
+- [State Management v2](./react-frontend/statemanagement2/)
+- [Node.js Core](./backend-node/nodecore/)
 
 ## Common Algorithms & Patterns
 
@@ -469,9 +476,9 @@ npm start
 
 ```bash
 # Navigate to specific topics
-cd DSA/
-cd Leetcode/
-cd react-tuto/
+cd algorithms-dsa/DSA/
+cd algorithms-dsa/Leetcode/
+cd react-frontend/react-tuto/
 
 # Run JavaScript files
 node filename.js
@@ -488,37 +495,37 @@ node index.js
 ## Study Recommendations
 
 ### Week 1-2: Fundamentals
-1. Start with [js1](./js1/) - JavaScript basics
-2. Explore [corejs](./corejs/) - Core concepts
-3. Practice [arrays](./arrays/) - Array manipulation
-4. Study [strings](./strings/) - String operations
+1. Start with [js1](./js-fundamentals/js1/) - JavaScript basics
+2. Explore [corejs](./js-fundamentals/corejs/) - Core concepts
+3. Practice [arrays](./algorithms-dsa/arrays/) - Array manipulation
+4. Study [strings](./algorithms-dsa/strings/) - String operations
 
 ### Week 3-4: Data Structures
-1. [DSA](./DSA/) - Fundamental structures
-2. [Leetcode](./Leetcode/) - Easy problems
-3. Practice with [codility](./codility/)
+1. [DSA](./algorithms-dsa/DSA/) - Fundamental structures
+2. [Leetcode](./algorithms-dsa/Leetcode/) - Easy problems
+3. Practice with [codility](./algorithms-dsa/codility/)
 
 ### Week 5-6: Advanced Algorithms
-1. Continue [Leetcode](./Leetcode/) - Medium problems
-2. Study [amazon](./amazon/) - Interview questions
+1. Continue [Leetcode](./algorithms-dsa/Leetcode/) - Medium problems
+2. Study [amazon](./algorithms-dsa/amazon/) - Interview questions
 3. Master sorting and searching algorithms
 
 ### Week 7-8: Frontend Development
-1. [React Tutorials](./react-tuto/)
-2. [Hooks](./hooks/) implementation
-3. [State Management](./statemanagement/)
-4. [Advanced State Management](./advancedstatemanagement/)
+1. [React Tutorials](./react-frontend/react-tuto/)
+2. [Hooks](./react-frontend/hooks/) implementation
+3. [State Management](./react-frontend/statemanagement/)
+4. [Advanced State Management](./react-frontend/advancedstatemanagement/)
 
 ### Week 9-10: Backend Development
-1. [Node.js Core](./nodecore/)
-2. [Backend JS](./backendjs/)
-3. [APIs](./apis/)
-4. [Using Prisma](./usingPrisma/)
+1. [Node.js Core](./backend-node/nodecore/)
+2. [Backend JS](./backend-node/backendjs/)
+3. [APIs](./backend-node/apis/)
+4. [Using Prisma](./backend-node/usingPrisma/)
 
 ### Week 11-12: System Design & Auth
-1. [Caching](./Caching/) strategies
-2. [OAuth](./oauth/) & [Social Authentication](./social_authentication/)
-3. [Role-Based Access](./rolesbased/)
+1. [Caching](./backend-node/Caching/) strategies
+2. [OAuth](./auth-security/oauth/) & [Social Authentication](./auth-security/social_authentication/)
+3. [Role-Based Access](./auth-security/rolesbased/)
 4. Build full-stack projects
 
 ## Resources
@@ -537,14 +544,14 @@ node index.js
 👉 Click any banner to watch the video.
 
 ### File Handling
-- [filesH](./filesH/) - File operations
-- [media](./media/) - Media processing
+- [filesH](./files-media/filesH/) - File operations
+- [media](./files-media/media/) - Media processing
 
 ### Interview Resources
-- [preparations](./preparations/) - Interview strategies
-- [Leetcode](./Leetcode/) - Practice problems
-- [amazon](./amazon/) - Company-specific questions
-- [codility](./codility/) - Timed challenges
+- [preparations](./algorithms-dsa/preparations/) - Interview strategies
+- [Leetcode](./algorithms-dsa/Leetcode/) - Practice problems
+- [amazon](./algorithms-dsa/amazon/) - Company-specific questions
+- [codility](./algorithms-dsa/codility/) - Timed challenges
 
 ## Contributing
 
@@ -583,10 +590,10 @@ See [LICENSE](./LICENSE) file for details.
 ## Quick Reference
 
 ### Most Popular Directories
-- 🔥 [Leetcode](./Leetcode/) - 80+ problem solutions
-- ⚛️ [React Tutorials](./react-tuto/) - Complete React guide
-- 🚀 [Node.js Core](./nodecore/) - Backend essentials
-- 💾 [DSA](./DSA/) - Data structures & algorithms
+- 🔥 [Leetcode](./algorithms-dsa/Leetcode/) - 80+ problem solutions
+- ⚛️ [React Tutorials](./react-frontend/react-tuto/) - Complete React guide
+- 🚀 [Node.js Core](./backend-node/nodecore/) - Backend essentials
+- 💾 [DSA](./algorithms-dsa/DSA/) - Data structures & algorithms
 
 ### Common Patterns to Study
 - **Array**: Two pointers, sliding window, prefix sum
