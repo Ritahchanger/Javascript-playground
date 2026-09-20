@@ -34,7 +34,6 @@ Javascript-playground/
 ├── react-tuto/                   # React tutorials
 ├── frontendJS/                   # Frontend JavaScript concepts
 ├── backendjs/                    # Backend JavaScript/Node.js
-├── node1/                        # Node.js projects
 ├── nodecore/                     # Node.js core concepts
 ├── apis/                         # API implementations
 ├── oauth/                        # OAuth authentication
@@ -167,9 +166,6 @@ Modern landing page designs and implementations.
 #### [Backend JavaScript](./backendjs/)
 Backend JavaScript concepts and implementations.
 
-#### [Node.js Projects](./node1/)
-Various Node.js project implementations.
-
 #### [Node.js Core](./nodecore/)
 Core Node.js concepts and modules.
 - Event loop
@@ -298,8 +294,7 @@ graph TD
     V2 --> W[advancedstatemanagement]
     
     D --> X[Backend Development]
-    X --> Y[node1]
-    Y --> Z[nodecore]
+    X --> Z[nodecore]
     Z --> AA[backendjs]
     AA --> AB[apis]
     
