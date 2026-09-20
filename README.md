@@ -29,6 +29,7 @@ Javascript-playground/
 ├── objects/                      # Object-oriented programming
 ├── hooks/                        # React Hooks examples
 ├── statemanagement/              # State management patterns
+├── statemanagement2/             # Redux + TypeScript state management
 ├── advancedstatemanagement/      # Advanced state management
 ├── react-tuto/                   # React tutorials
 ├── frontendJS/                   # Frontend JavaScript concepts
@@ -131,6 +132,9 @@ React Hooks implementations and patterns.
 
 #### [State Management](./statemanagement/)
 Basic state management patterns in React.
+
+#### [State Management v2](./statemanagement2/)
+Redux + TypeScript state management built with Vite.
 
 #### [Advanced State Management](./advancedstatemanagement/)
 Advanced state management techniques.
@@ -290,7 +294,8 @@ graph TD
     R --> T[React Tutorials]
     T --> U[hooks]
     U --> V[statemanagement]
-    V --> W[advancedstatemanagement]
+    V --> V2[statemanagement2]
+    V2 --> W[advancedstatemanagement]
     
     D --> X[Backend Development]
     X --> Y[node1]
@@ -375,6 +380,7 @@ npm start
 - [React Tutorials](./react-tuto/)
 - [Hooks](./hooks/)
 - [State Management](./statemanagement/)
+- [State Management v2](./statemanagement2/)
 - [Node.js Core](./nodecore/)
 
 ## Common Algorithms & Patterns
