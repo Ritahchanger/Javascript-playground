@@ -38,4 +38,5 @@ if(result !== -1){
     console.log(`Element found at index: ${result}`);
 }else{
     console.log("Element not found");
+    
 }
